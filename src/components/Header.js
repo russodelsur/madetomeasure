@@ -28,11 +28,13 @@ const Layout = () => {
             <Nav.Link><Link to="/" id="headerItem" >Home</Link></Nav.Link>
             <Nav.Link ><Link to="/products" id="headerItem" >Products</Link></Nav.Link>
             <NavDropdown title="Menu" id="basic-nav-dropdown">
-              <NavDropdown.Item><Link to="/profile" id="headerItem" >Profile</Link></NavDropdown.Item>
+              <NavDropdown.Item><Link to="/profile">Profile</Link></NavDropdown.Item>
+              <NavDropdown.Item><Link to="/interest">Interest Calculator</Link></NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item>
-              <Link to="/legal" id="headerItem" >Legal</Link>
+              <Link to="/legal">Legal</Link>
               </NavDropdown.Item>
+              
             </NavDropdown>
             <Button onClick={()=>LogOut()} className="ml-auto" style={{marginLeft:"auto", marginRight:"0", float:"right"}}>Log out</Button>
           </Nav>

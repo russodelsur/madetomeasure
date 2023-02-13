@@ -43,7 +43,7 @@ function Product(props) {
   let productsList = props.map((product, index) =>{
   return (
     <Col key={index} index={index} >
-      <Card className="card-deck" >
+      <Card bg='dark' className="card-deck" >
         <div className="card">
             <img
               alt={product.name}
@@ -53,12 +53,12 @@ function Product(props) {
         <h4 className="card-title" title={product.name}>
           {product.name}
         </h4>
-        <h5 className="card-text" title={product.brand_name}>
+        <p className="card-text" title={product.brand_name}>
           {`by ${product.brand_name}`}
-        </h5>
-        <div className="card-text">
+        </p>
+        <p className="card-text">
           {`${product.price}`}
-        </div>
+        </p>
       </Card>
     </Col>
     )});

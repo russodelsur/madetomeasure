@@ -1,3 +1,5 @@
+// Legal page simply displaying legal message
+
 import React, { Component } from 'react';
 
 class Legal extends Component {

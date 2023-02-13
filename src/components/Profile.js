@@ -1,3 +1,5 @@
+// Profile page showing profile information if user is logged in, showing message to log in if user is logged out.
+
 import React, { Component } from 'react';
 import Card from 'react-bootstrap/Card';
 
