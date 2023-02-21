@@ -3,20 +3,7 @@
 import React from "react";
 import "./style.css"
 import { Outlet, Link } from "react-router-dom";
-import { Container, Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
-
-function User(name, surname, age){
-  this.name = name;
-  this.surname = surname;
-  this.age = age;
-};
-
-function LogOut(){
-  let user = new User("Not Logged so log in text is difficult so it won't get confused", "NA", 0)
-  localStorage.setItem("user", JSON.stringify(user));
-  alert("You have logged out. See you later!")
-  window.location.reload();
-}
+import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
 
 const Layout = () => {
   return (
@@ -34,9 +21,7 @@ const Layout = () => {
               <NavDropdown.Item>
               <Link to="/legal">Legal</Link>
               </NavDropdown.Item>
-              
             </NavDropdown>
-            <Button onClick={()=>LogOut()} className="ml-auto" style={{marginLeft:"auto", marginRight:"0", float:"right"}}>Log out</Button>
           </Nav>
         </Container>
       </Navbar>

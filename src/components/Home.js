@@ -24,14 +24,9 @@ function User(name, surname, age){
 // Getting user from local storage if user has signed up
 let users = JSON.parse(localStorage.getItem("user"));
 
-// checking if user is signed out.
-if (users === null) {
-  users = new User("Not Logged so log in text is difficult so it won't get confused", "NA", 0)
-} 
-
 // Setting boolead to use later to pick what is shown in screen.
 let boolean;
-if (users.name === "Not Logged so log in text is difficult so it won't get confused"){
+if (users?.name === undefined){
   boolean = false;
 } else {
   boolean = true;
@@ -53,8 +48,8 @@ if (users.name === "Not Logged so log in text is difficult so it won't get confu
       )
   }
       return (
-        <div key={users.name + users.age}>
-          <User name={users.name} surname={users.surname} birthYear={users.age} />
+        <div key={users?.name + users?.age}>
+          <User name={users?.name} surname={users?.surname} birthYear={users?.age} />
         </div>
   )}
 
@@ -90,7 +85,7 @@ class Home extends React.Component{
               {addUsers(users) }
           {boolean ? 
             <div className="text-white bg-success mb-3">
-              <p style={{textAlign:"center", margin:"auto"}}> You are signed in {users.name}</p>
+              <p style={{textAlign:"center", margin:"auto"}}> You are signed in {users?.name}</p>
             </div>
           : 
             <div className="button">
